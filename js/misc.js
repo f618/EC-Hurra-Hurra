@@ -2,29 +2,9 @@
 // a collection of various scripts pulled from the ether
 // references included at a later date
 
-// clocks
-const clocks = document.getElementsByClassName("clock");
-
-function updateClocks() {
-  for (let clock of clocks) {
-    let timezone = clock.dataset.timezone;
-    let time = new Date().toLocaleTimeString("en-US", {
-      hour: '2-digit',
-      timeZone: timezone
-    });
-    clock.textContent = time;
-  }
-}
-
-setInterval(updateClocks, 60000);
-updateClocks();
-
 // dragable boxs
-dragElement(document.getElementById("melbourne"));
-dragElement(document.getElementById("macau"));
-dragElement(document.getElementById("london"));
 dragElement(document.getElementById("contact"));
-dragElement(document.getElementById("miscresearch"));
+dragElement(document.getElementById("ecTitle"));
 
 function dragElement(elmnt) {
 	var pos1 = 0,

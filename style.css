@@ -52,7 +52,7 @@ a:hover {
 
 /* floating content */
 
-#miscresearch {
+#ecTitle {
   position: fixed;
   font-size: 40px;
   z-index: 30;
