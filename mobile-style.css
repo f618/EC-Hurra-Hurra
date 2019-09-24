@@ -1,0 +1,150 @@
+/* miscresearch website by felix taylor */
+/* global */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: black;
+}
+
+a:hover {
+  color: #white;
+}
+
+/* floating content */
+
+#miscresearch {
+  border: 2px solid black;
+  font-family: 'Work Sans SemiBold', sans-serif;
+  display: none;
+}
+
+#melbourne {
+  border: 2px solid black;
+  font-family: 'Work Sans SemiBold', sans-serif;
+  display: none;
+}
+
+#london {
+  border: 2px solid black;
+  font-family: 'Work Sans SemiBold', sans-serif;
+  display: none;
+}
+
+#macau {
+  border: 2px solid black;
+  font-family: 'Work Sans SemiBold', sans-serif;
+  display: none;
+}
+
+#contact {
+  border: 2px solid black;
+  font-family: 'Work Sans SemiBold', sans-serif;
+  display: none;
+}
+
+/* background-site aka iframe */
+
+#background-site {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+
+}
+
+#background-site iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: scroll;
+}
+
+#background-site {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+#background-site iframe {
+  width: 100%;
+  height: 5500px;
+
+}
+
+/* mobile site */
+
+#mobile {
+  font-family: 'Work Sans Bold', sans-serif;
+  display: grid;
+  grid-template-rows: 20vw 20vw auto auto auto auto
+  grid-gap: 0;
+}
+
+#heading {
+  padding: 1vw;
+  line-height: 20vw;
+  font-size: 15vw;
+  border-bottom: 1px solid black;
+}
+
+.button {
+  padding: 1vw;
+  background: none;
+  border: none;
+  font-size: 15vw;
+  outline: none;
+}
+
+#about {
+  padding: 1vw;
+  font-size: 15vw;
+  border-bottom: 1px solid black;
+}
+
+#aboutContent {
+  padding: 2vw;
+  font-size: 8vw;
+  border-bottom: 1px solid black;
+  color: black;
+  background-color: white;
+  display: none;
+}
+
+#headline1 {
+  padding: 1vw;
+  font-size: 15vw;
+  border-bottom: 1px solid black;
+  background-color: white;
+  display: block;
+  overflow: hidden;
+}
+
+#chairman {
+  padding: 8vw;
+  background-color: black;
+  border-bottom: 1px solid black;
+}
+
+
+#email {
+  font-size: 15vw;
+}

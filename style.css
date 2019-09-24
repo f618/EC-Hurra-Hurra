@@ -1,0 +1,163 @@
+/* miscresearch website by felix taylor */
+/* global */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: black;
+}
+
+a:hover {
+  color: black;
+}
+
+/* header */
+
+#header {
+  position: absolute;
+  width: 100%;
+  z-index: 30;
+  font-size: 82px;
+  font-family: 'Work Sans Bold', sans-serif;
+  padding: 5px;
+  text-align: center;
+  transition: 0.3s;
+  background: #F8F9FA;
+  color: white;
+ }
+
+  #header:hover {
+  opacity: 0;
+  z-index: 0;
+  transition: 0.4s;
+}
+
+/* floating content */
+
+#miscresearch {
+  position: fixed;
+  font-size: 40px;
+  z-index: 30;
+  left: 50%;
+  top: 10%;
+  padding: 20px;
+  cursor: move;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+  font-family: 'Work Sans SemiBold', sans-serif;
+  letter-spacing: 1px;
+}
+
+#melbourne {
+  position: fixed;
+  font-size: 20px;
+  z-index: 30;
+  left: 90px;
+  top: 40%;
+  padding: 20px;
+  cursor: move;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+  font-family: 'Work Sans SemiBold', sans-serif;
+  letter-spacing: 1px;
+}
+
+#london {
+  position: fixed;
+  font-size: 20px;
+  z-index: 30;
+  left: 20%;
+  top: 80%;
+  padding: 20px;
+  cursor: move;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+  font-family: 'Work Sans SemiBold', sans-serif;
+  letter-spacing: 1px;
+}
+
+#macau {
+  position: fixed;
+  font-size: 20px;
+  z-index: 30;
+  left: 70%;
+  top: 50%;
+  padding: 20px;
+  cursor: move;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+  font-family: 'Work Sans SemiBold', sans-serif;
+  letter-spacing: 1px;
+}
+
+#contact {
+  position: fixed;
+  font-size: 35px;
+  z-index: 40;
+  left: 80%;
+  top: 80%;
+  text-align: center;
+  padding: 20px;
+  cursor: move;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+  font-family: 'Work Sans SemiBold', sans-serif;
+  letter-spacing: 1px;
+  border-radius: 100%;
+}
+
+/* background-site aka iframe */
+
+#background-site {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#background-site iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: scroll;
+}
+
+#background-site {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+#background-site iframe {
+  width: 100%;
+  height: 5500px;
+  overflow: hidden;
+}
+
+/* mobile site */
+
+#mobile {
+  display: none;
+}
