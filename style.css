@@ -60,20 +60,6 @@ a:hover {
   top: 10%;
   padding: 20px;
   cursor: move;
-  color: white;
-  background-color: #0000FF;
-  font-family: 'Work Sans SemiBold', sans-serif;
-  letter-spacing: 1px;
-}
-
-#melbourne {
-  position: fixed;
-  font-size: 20px;
-  z-index: 30;
-  left: 90px;
-  top: 40%;
-  padding: 20px;
-  cursor: move;
   color: black;
   border: 1px solid black;
   background-color: white;
@@ -81,35 +67,7 @@ a:hover {
   letter-spacing: 1px;
 }
 
-#london {
-  position: fixed;
-  font-size: 20px;
-  z-index: 30;
-  left: 20%;
-  top: 80%;
-  padding: 20px;
-  cursor: move;
-  color: black;
-  border: 1px solid black;
-  background-color: white;
-  font-family: 'Work Sans SemiBold', sans-serif;
-  letter-spacing: 1px;
-}
 
-#macau {
-  position: fixed;
-  font-size: 20px;
-  z-index: 30;
-  left: 70%;
-  top: 50%;
-  padding: 20px;
-  cursor: move;
-  color: black;
-  border: 1px solid black;
-  background-color: white;
-  font-family: 'Work Sans SemiBold', sans-serif;
-  letter-spacing: 1px;
-}
 
 #contact {
   position: fixed;
