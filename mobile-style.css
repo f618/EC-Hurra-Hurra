@@ -114,36 +114,6 @@ a:hover {
   outline: none;
 }
 
-#about {
-  padding: 1vw;
-  font-size: 15vw;
-  border-bottom: 1px solid black;
-}
-
-#aboutContent {
-  padding: 2vw;
-  font-size: 8vw;
-  border-bottom: 1px solid black;
-  color: black;
-  background-color: white;
-  display: none;
-}
-
-#headline1 {
-  padding: 1vw;
-  font-size: 15vw;
-  border-bottom: 1px solid black;
-  background-color: white;
-  display: block;
-  overflow: hidden;
-}
-
-#chairman {
-  padding: 8vw;
-  background-color: black;
-  border-bottom: 1px solid black;
-}
-
 
 #email {
   font-size: 15vw;
