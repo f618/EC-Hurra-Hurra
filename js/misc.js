@@ -2,82 +2,77 @@
 // a collection of various scripts pulled from the ether
 // references included at a later date
 
-// dragable boxs
-dragElement(document.getElementById("contact"));
-dragElement(document.getElementById("ecTitle"));
-
-function dragElement(elmnt) {
-	var pos1 = 0,
-		pos2 = 0,
-		pos3 = 0,
-		pos4 = 0;
-	if (document.getElementById(elmnt.id + "header")) {
-		// if present, the header is where you move the DIV from:
-		document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-	} else {
-		// otherwise, move the DIV from anywhere inside the DIV:
-		elmnt.onmousedown = dragMouseDown;
-	}
-
-	function dragMouseDown(e) {
-		e = e || window.event;
-		e.preventDefault();
-		// get the mouse cursor position at startup:
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		document.onmouseup = closeDragElement;
-		// call a function whenever the cursor moves:
-		document.onmousemove = elementDrag;
-	}
-
-	function elementDrag(e) {
-		e = e || window.event;
-		e.preventDefault();
-		// calculate the new cursor position:
-		pos1 = pos3 - e.clientX;
-		pos2 = pos4 - e.clientY;
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		// set the element's new position:
-		elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-		elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-	}
-
-	function closeDragElement() {
-		// stop moving when mouse button is released:
-		document.onmouseup = null;
-		document.onmousemove = null;
-	}
+// pop up
+function myFunction() {
+  var x = document.getElementById("countdown");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
 }
 
-function aboutBtn() {
-  var x = document.getElementById("aboutContent");
-  if(x.style.display == 'none'){
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-    return false;
-}
+var dragItem = document.querySelector("#countdown");
+	 var container = document.querySelector("#countdown");
 
-$(function() {
 
-    var marquee = $("#marquee");
-    marquee.css({"overflow": "hidden", "width": "100%"});
+	 var active = false;
+	 var currentX;
+	 var currentY;
+	 var initialX;
+	 var initialY;
+	 var xOffset = 0;
+	 var yOffset = 0;
 
-    // wrap "My Text" with a span (IE doesn't like divs inline-block)
-    marquee.wrapInner("<span>");
-    marquee.find("span").css({ "width": "50%", "display": "inline-block", "text-align":"center" });
-    marquee.append(marquee.find("span").clone()); // now there are two spans with "My Text"
+	 container.addEventListener("touchstart", dragStart, false);
+	 container.addEventListener("touchend", dragEnd, false);
+	 container.addEventListener("touchmove", drag, false);
 
-    marquee.wrapInner("<div>");
-    marquee.find("div").css("width", "200%");
+	 container.addEventListener("mousedown", dragStart, false);
+	 container.addEventListener("mouseup", dragEnd, false);
+	 container.addEventListener("mousemove", drag, false);
 
-    var reset = function() {
-        $(this).css("margin-left", "0%");
-        $(this).animate({ "margin-left": "-100%" }, 3000, 'linear', reset);
-    };
+	 function dragStart(e) {
+		 if (e.type === "touchstart") {
+			 initialX = e.touches[0].clientX - xOffset;
+			 initialY = e.touches[0].clientY - yOffset;
+		 } else {
+			 initialX = e.clientX - xOffset;
+			 initialY = e.clientY - yOffset;
+		 }
 
-    reset.call(marquee.find("div"));
+		 if (e.target === dragItem) {
+			 active = true;
+		 }
+	 }
 
-});
+	 function dragEnd(e) {
+		 initialX = currentX;
+		 initialY = currentY;
+
+		 active = false;
+	 }
+
+	 function drag(e) {
+		 if (active) {
+
+			 e.preventDefault();
+
+			 if (e.type === "touchmove") {
+				 currentX = e.touches[0].clientX - initialX;
+				 currentY = e.touches[0].clientY - initialY;
+			 } else {
+				 currentX = e.clientX - initialX;
+				 currentY = e.clientY - initialY;
+			 }
+
+			 xOffset = currentX;
+			 yOffset = currentY;
+
+			 setTranslate(currentX, currentY, dragItem);
+		 }
+	 }
+
+	 function setTranslate(xPos, yPos, el) {
+		 el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+	 }
