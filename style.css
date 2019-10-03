@@ -36,7 +36,7 @@ header img {
   position: fixed;
   width: 100%;
   max-width: 400px;
-  z-index: 30;
+  z-index: 2;
   right: 30px;
   top: 50px;
 }
@@ -79,7 +79,7 @@ header img {
 }
 /*countdown*/
 #countdown {
-  z-index: 2;
+  z-index: 3;
   display: none;
   position: fixed;
     border-radius: 20px;
