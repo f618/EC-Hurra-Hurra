@@ -24,17 +24,17 @@
   <div class="button-wrapper">
 <!--<a href="https://www.youtube.com/watch?v=KAHKP313P2I">-->
     <div class="button">
-      <button onclick="myFunction()" class="countdownButton"><img src="images/10-minute.png"></button>
+      <button onclick="countDown1()" class="countdownButton"><img src="images/10-minute.png"></button>
     </div>
 
     <div class="button">
       <!--<a href="https://www.youtube.com/watch?v=KAHKP313P2I">-->
-      <button onclick="myFunction()" class="countdownButton"><img src="images/15-minute.png"></button>
+      <button onclick="countDown2()" class="countdownButton"><img src="images/15-minute.png"></button>
     </div>
 
     <div class="button">
       <!--<a href="https://www.youtube.com/watch?v=KAHKP313P2I">-->
-      <button onclick="myFunction()" class="countdownButton"><img src="images/30-minute.png"></button>
+      <button onclick="countDown3()" class="countdownButton"><img src="images/30-minute.png"></button>
     </div>
 
     <div class="button">
@@ -47,8 +47,16 @@
 
   </div>
 
-  <div id="countdown" style="display:none;">
-  <iframe width="800" height="600" src="https://www.youtube.com/embed/M2dhD9zR6hk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div id="countdown1" style="display:none;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/KAHKP313P2I?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div id="countdown2" style="display:none;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eDutto_iPho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div id="countdown3" style="display:none;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SjPh0KpUAQI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
 <!-- iframe -->
@@ -58,14 +66,11 @@
 <!-- scripts -->
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>
-  window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-  </script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="js/vendor/jquery.ui.touch-punch.min.js"></script>
   <script src="js/misc.js"></script>
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </body>
 
 </html>

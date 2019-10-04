@@ -1,6 +1,5 @@
 /* miscresearch website by felix taylor */
 /* global */
-
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +30,6 @@ a:hover {
 }
 
 /* floating content */
-
 header img {
   position: fixed;
   width: 100%;
@@ -71,35 +69,87 @@ header img {
 
 .countdownButton {
   background-color: Transparent;
-      background-repeat:no-repeat;
-      border: none;
-      cursor:pointer;
-      overflow: hidden;
-      outline:none;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }
+
 /*countdown*/
-#countdown {
+#countdown1 {
   z-index: 3;
   display: none;
   position: fixed;
-    border-radius: 20px;
+  border-radius: 20px;
+  width: 560px;
+  height: 315px;
   padding: 20px;
-  right:200px;
+  right: 200px;
   bottom: 90px;
   background-color: white;
   border: 1px solid black;
   touch-action: none;
   user-select: none;
 }
-#countdown:active {
+
+#countdown1:active {
   border-color: blue;
 }
-#countdown:hover {
+
+#countdown1:hover {
+  cursor: pointer;
+}
+
+#countdown2 {
+  z-index: 3;
+  display: none;
+  position: fixed;
+  border-radius: 20px;
+  width: 560px;
+  height: 315px;
+  padding: 20px;
+  right: 200px;
+  bottom: 90px;
+  background-color: white;
+  border: 1px solid black;
+  touch-action: none;
+  user-select: none;
+}
+
+#countdown2:active {
+  border-color: blue;
+}
+
+#countdown2:hover {
+  cursor: pointer;
+}
+
+#countdown3 {
+  z-index: 3;
+  display: none;
+  position: fixed;
+  border-radius: 20px;
+  width: 560px;
+  height: 315px;
+  padding: 20px;
+  right: 200px;
+  bottom: 90px;
+  background-color: white;
+  border: 1px solid black;
+  touch-action: none;
+  user-select: none;
+}
+
+#countdown3:active {
+  border-color: blue;
+}
+
+#countdown3:hover {
   cursor: pointer;
 }
 
 /* background-site aka iframe */
-
 #background-site {
   position: absolute;
   width: 100%;
