@@ -1,6 +1,5 @@
 /* miscresearch website by felix taylor */
 /* global */
-
 * {
   margin: 0;
   padding: 0;
@@ -12,64 +11,103 @@ html {
 }
 
 body {
+  background-color: blue;
   position: relative;
   width: 100%;
   height: 100%;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 a {
   text-decoration: none;
-}
-
-a:link, a:visited {
   color: black;
 }
 
 a:hover {
-  color: #white;
+  color: blue;
+  cursor: pointer;
 }
 
 /* floating content */
-
-#miscresearch {
-  border: 2px solid black;
-  font-family: 'Work Sans SemiBold', sans-serif;
-  display: none;
+header img {
+display: none;
+visibility: hidden;
 }
 
-#melbourne {
-  border: 2px solid black;
-  font-family: 'Work Sans SemiBold', sans-serif;
-  display: none;
+.button-wrapper {
+display: none;
 }
 
-#london {
-  border: 2px solid black;
-  font-family: 'Work Sans SemiBold', sans-serif;
-  display: none;
+.button {
+display: none;
 }
 
-#macau {
-  border: 2px solid black;
-  font-family: 'Work Sans SemiBold', sans-serif;
-  display: none;
+.button img {
+  max-width: 50px;
 }
 
-#contact {
-  border: 2px solid black;
-  font-family: 'Work Sans SemiBold', sans-serif;
+.button:hover {
+  border-color: blue;
+}
+
+.countdownButton {
+display: none;
+}
+
+/*countdown*/
+#countdown1 {
+display: none;
+}
+
+#countdown1:active {
+  border-color: blue;
+}
+
+#countdown1:hover {
+  cursor: pointer;
+}
+
+#countdown2 {
+display: none;
+}
+
+#countdown2:active {
+  border-color: blue;
+}
+
+#countdown2:hover {
+  cursor: pointer;
+}
+
+#countdown3 {
+  z-index: 3;
   display: none;
+  position: fixed;
+  border-radius: 20px;
+  width: 560px;
+  height: 315px;
+  padding: 20px;
+  right: 200px;
+  bottom: 90px;
+  background-color: white;
+  border: 1px solid black;
+  touch-action: none;
+  user-select: none;
+}
+
+#countdown3:active {
+  border-color: blue;
+}
+
+#countdown3:hover {
+  cursor: pointer;
 }
 
 /* background-site aka iframe */
-
 #background-site {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: none;
-
+display: none;
 }
 
 #background-site iframe {
@@ -84,37 +122,12 @@ a:hover {
   overflow: auto;
 }
 
-#background-site iframe {
-  width: 100%;
-  height: 5500px;
-
-}
-
-/* mobile site */
-
 #mobile {
-  font-family: 'Work Sans Bold', sans-serif;
-  display: grid;
-  grid-template-rows: 20vw 20vw auto auto auto auto
-  grid-gap: 0;
-}
+  max-width: 600px;
+  height: 100%;
+  z-index: 5;
+  display: block;
+  background-color: white;
+  padding: 2rem;
 
-#heading {
-  padding: 1vw;
-  line-height: 20vw;
-  font-size: 15vw;
-  border-bottom: 1px solid black;
-}
-
-.button {
-  padding: 1vw;
-  background: none;
-  border: none;
-  font-size: 15vw;
-  outline: none;
-}
-
-
-#email {
-  font-size: 15vw;
 }
